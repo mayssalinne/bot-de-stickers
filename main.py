@@ -1,3 +1,5 @@
+import telegram 
+print(f"Versão do python-telegram-bot: {telegram.__version__}")
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os

@@ -2,13 +2,13 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")  # ou só TOKEN = "seu_token_aqui"
+TOKEN = os.getenv("BOT_TOKEN")  # ou coloque diretamente: TOKEN = "seu_token_aqui"
 
-# Comando /start
+# Função do comando /start
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Olá! Bot funcionando no Render 🎉")
+    await update.message.reply_text("Olá! Bot está funcionando!")
 
-# Inicialização
+# Inicializando o bot
 if __name__ == '__main__':
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))

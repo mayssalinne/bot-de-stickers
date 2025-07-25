@@ -1,17 +1,13 @@
-from telegram import Update
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
-
+from telegram.ext import ApplicationBuilder, CommandHandler
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("BOT_TOKEN")  # ou apenas 'TOKEN = "seu_token_aqui"' para testes locais
 
-# Comando /start
-async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Olá, Rainha! 👑 O bot está funcionando.")
+async def start(update, context):
+    await update.message.reply_text("Olá! Bot funcionando!")
 
-# Monta o app
 app = ApplicationBuilder().token(TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 
-# Executa o bot
-app.run_polling()
+if __name__ == '__main__':
+    app.run_polling()

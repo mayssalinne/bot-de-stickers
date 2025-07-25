@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: bot-de-stickers
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    envVars:
+      - key: BOT_TOKEN
+        value: 7956634632:AAFijJtLbal-wJxZ8eb4m9u1a69hvBat1Tc

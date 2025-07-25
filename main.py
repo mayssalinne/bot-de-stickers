@@ -3,7 +3,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")  # Usaremos variável no Render!
+TOKEN = os.getenv("7956634632:AAFijJtLbal-wJxZ8eb4m9u1a69hvBat1Tc")
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Olá, eu sou seu bot de stickers! Use /newpack para começar 👑")

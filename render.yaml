@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: bot-de-stickers
+    env: python
+    plan: free
+    buildCommand: |
+      pyenv install 3.10.12
+      pyenv global 3.10.12
+      pip install -r requirements.txt
+    startCommand: python main.py
